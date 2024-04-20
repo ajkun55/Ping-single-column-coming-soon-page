@@ -1,0 +1,131 @@
+/* =============== Global Variables =============== */
+
+:root {
+  /* Primary Colors */ 
+  --clr-Pale-Blue: hsl(223, 100%, 88%);
+  --clr-Light-Red: hsl(354, 100%, 66%);
+
+  /* Neutral Colors */
+   --clr-Gray: hsl(0, 0%, 59%);
+   --clr-Very-Dark-Blue: hsl(209, 33%, 12%);
+
+  /* Typography */
+  --fs-body: 20px;
+  --fs-h1:3.5rem;
+  --ff-primary: "Libre Franklin";
+  --fw-low:300;
+  --fw-mid:600;
+  --fw-weight:700;
+}
+.libre-franklin{
+    font-family: "Libre Franklin";
+    font-optical-sizing: auto;    
+    font-style: normal;
+  }
+
+@media only screen and (max-width:768px) {
+  :root {
+    --fs-h1:2.25rem;  
+  }
+}
+
+/* =============== Global Styles =============== */
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  color: var(--clr-Gray);
+  width:100%;height:100vh;margin: 0;
+}
+h1 {
+  font-size: var(--fs-h1);
+  color: var(--clr-Gray);
+  font-weight: var(--fw-weight);
+}
+p {
+  color: var(--clr-Very-Dark-Blue);
+  margin-bottom: 2.5rem;
+  line-height: 2rem;
+}
+
+img {
+  display: inline-block;
+}
+
+/* =============== Reusable Classes =============== */
+
+/* --- Buttons --- */
+button { 
+  font-weight: var(--fw-mid);  
+  color: white !important;
+  background: rgb(25, 71, 238);
+  border-radius: 3rem; width: 9rem;
+}
+
+button:hover {
+  background: var(--clr-Pale-Blue) ;
+}
+
+/* =============== Header Styles =============== */
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.email{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2.5rem auto; gap: 2rem;
+}
+.logo{
+    margin-top: 4rem;
+}
+.title{
+    margin: 2rem auto;
+}
+.title span{
+    color: black;
+}
+.note{
+    margin: -1.5rem auto;
+}
+input{
+    height: 2.3rem;
+}
+button{
+    height: 2.8rem; 
+}
+#error{
+    display: none;color: red;margin-top: -1.9rem; margin-bottom: 0;font-size: 0.9rem;
+}
+
+@media only screen and (max-width:768px) {
+    .header{
+        width: 100%;
+    }
+}
+/* =============== Main Styles =============== */
+.pic{
+    display: flex;justify-content: center;
+}
+.pic img{
+    width:45%;
+    
+}
+
+
+/* =============== Footer Styles =============== */
+footer{
+    display: flex;align-items: center;flex-direction: column;
+    margin-top: 5rem;
+}
+.icon ion-icon{
+    padding: 0 0.6rem;
+}
+.right{
+    font-weight: var(--fw-low);
+    color: var(--clr-Gray);font-size: 0.8rem;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
