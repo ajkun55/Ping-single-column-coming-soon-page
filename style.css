@@ -25,7 +25,7 @@
 
 @media only screen and (max-width:768px) {
   :root {
-    --fs-h1:2.25rem;  
+    --fs-h1:2.25rem;      
   }
 }
 
@@ -45,10 +45,6 @@ p {
   color: var(--clr-Very-Dark-Blue);
   margin-bottom: 2.5rem;
   line-height: 2rem;
-}
-
-img {
-  display: inline-block;
 }
 
 /* =============== Reusable Classes =============== */
@@ -90,7 +86,7 @@ button:hover {
     margin: -1.5rem auto;
 }
 input{
-    height: 2.3rem;
+    height: 2.3rem; border-radius: 3rem;
 }
 button{
     height: 2.8rem; 
@@ -103,17 +99,30 @@ button{
     .header{
         width: 100%;
     }
+    .email,.logo,.title,.note{
+        max-width: 80%;   }
+    body{
+        background: white;
+    }
+    .email{
+        display: flex;     flex-direction: column;   
+        gap: 0.7rem;width: 80%;
+    }
+    input, button{width: 80%;}
 }
+
 /* =============== Main Styles =============== */
 .pic{
     display: flex;justify-content: center;
 }
 .pic img{
-    width:45%;
-    
+    width:45%;    
 }
-
-
+@media only screen and (max-width:768px) {
+    .pic img{
+        width:100%;    
+    }
+}
 /* =============== Footer Styles =============== */
 footer{
     display: flex;align-items: center;flex-direction: column;
